@@ -21,14 +21,20 @@ public class ExampleAddon extends JavaPlugin implements SlimefunAddon {
         Config cfg = new Config(this);
 
         if (cfg.getBoolean("options.auto-update")) {
-            // You could start an Auto-Updater for example
+            MiniMessage mm = MiniMessage.miniMessage(); // Direct MiniMessage parsing into a Component 
+            Component message = mm.deserialize( "<red>A</red><gold>p</gold><yellow>p</yellow><green>r</green><aqua>o</aqua><blue>x</blue><light_purple>i</light_purple>" + "<#aa55ff>m</#aa55ff><#ff5580>a</#ff5580><#ffcc55>s</#ffcc55><#55ffaa>t</#55ffaa><#55aaff>e</#55aaff><#aa55ff>r</#aa55ff> " + "<gradient:#55ffff:#5555ff>Studios 2004</gradient>" ); 
+            // Example: send to console or player 
+            System.out.println(message);
+            System.out.println("on 2025.12.23, we decided to not work on version that is new than 1.21.11. only 1.21.11 is supported. please use ViaVersion to allow 1.21.11+ from joining.");
+            System.out.println("For More Information, Please see https://netgames.approximasterstudios2004.ddnsgeek.com/v26andabove.html for more info.");
+            System.out.println("Rest In Peace Our Plugin Development 2022.5~2026.1.1");
         }
 
         /*
          * 1. Creating a new Category
          * This Category will use the following ItemStack
          */
-        ItemStack itemGroupItem = new CustomItemStack(Material.DIAMOND, "&4Addon Category", "", "&a> Click to open");
+        ItemStack itemGroupItem = new CustomItemStack(Material.DIAMOND, "&4Funpro&6ximast&eer Category", "", "&a> Click to open");
 
         // Give your Category a unique id.
         NamespacedKey itemGroupId = new NamespacedKey(this, "addon_category");
@@ -39,7 +45,7 @@ public class ExampleAddon extends JavaPlugin implements SlimefunAddon {
          * This class has many constructors, it is very important
          * that you give each item a unique id.
          */
-        SlimefunItemStack slimefunItem = new SlimefunItemStack("COOL_DIAMOND", Material.DIAMOND, "&4Cool Diamond", "&c+20% Coolness");
+        SlimefunItemStack slimefunItem = new SlimefunItemStack("COOL_DIAMOND", Material.DIAMOND, "&5Cool Diamond", "&c+20% Coolness");
 
         /*
          * 3. Creating a Recipe

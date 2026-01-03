@@ -3,6 +3,10 @@
 > (플러그인이 적용된 상태로 최신 버전 클라이언트 접속도 허용하시고 싶으시면 ViaVersion, ViaBackwards, ViaRewind 플러그인을 적용하시기 바랍니다.)\
 > 자세한 내용은 https://netgames.approximasterstudios2004.ddnsgeek.com/v26andabove.html 을 확인하십시오.
 
+> [!CAUTION] 
+> This Plugin is Intended to Disable themselves On the version higher than 1.21.11. Please Use ViaVersion/Backwards/Rewind Plugin to Allow 26.1 and above joining your server whilst using this plugin.
+> for more info: please check https://netgames.approximasterstudios2004.ddnsgeek.com/v26andabove.html .
+
 # Slimefun4 Addon
 This is an example Repository for a generic Slimefun4 Addon.
 In the top left is a button "Use this template", click this to create your own Addon for Slimefun4 using this basic template.

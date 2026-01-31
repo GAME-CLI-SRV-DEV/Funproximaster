@@ -4,7 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
-
+// import org.mineacademy.fo.plugin.SimplePlugin;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -14,7 +14,7 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 
 public class ExampleAddon extends JavaPlugin implements SlimefunAddon {
-
+// public class main extends SimplePlugin implements SlimefunAddon
     @Override
     public void onEnable() {
         // Read something from your config.yml
@@ -26,8 +26,6 @@ public class ExampleAddon extends JavaPlugin implements SlimefunAddon {
             System.out.println(message);
             System.out.println("on 2025.12.23, we decided to not work on version that is new than 1.21.11. only 1.21.11 is supported. please use ViaVersion to allow 1.21.11+ from joining!");
             System.out.println("For More Information, Please see https://netgames.approximasterstudios2004.ddnsgeek.com/v26andabove.html for more info.");
-            System.out.println("2025년 12월 23일부로 저희 플러그인은 1.21.11만 지원합니다. 1.21.11보다 높은 버전은 지원하지 않습니다. 26.1 버전도 접속시키려면 ViaVersion을 사용해야 합니다!");
-            System.out.println("자세한 정보가 필요하시면 https://netgames.approximasterstudios2004.ddnsgeek.com/v26andabove.html을 확인하십시오.");
         }
 
         /*

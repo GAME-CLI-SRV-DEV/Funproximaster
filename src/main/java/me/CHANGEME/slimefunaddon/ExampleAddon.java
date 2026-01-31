@@ -23,7 +23,6 @@ public class ExampleAddon extends JavaPlugin implements SlimefunAddon {
         if (cfg.getBoolean("options.auto-update")) {
             MiniMessage mm = MiniMessage.miniMessage(); // Direct MiniMessage parsing into a Component 
             Component message = mm.deserialize( "<red>A</red><gold>p</gold><yellow>p</yellow><green>r</green><aqua>o</aqua><blue>x</blue><light_purple>i</light_purple>" + "<#aa55ff>m</#aa55ff><#ff5580>a</#ff5580><#ffcc55>s</#ffcc55><#55ffaa>t</#55ffaa><#55aaff>e</#55aaff><#aa55ff>r</#aa55ff> " + "<gradient:#55ffff:#5555ff>Studios 2004</gradient>" ); 
-            // Example: send to console or player 
             System.out.println(message);
             System.out.println("on 2025.12.23, we decided to not work on version that is new than 1.21.11. only 1.21.11 is supported. please use ViaVersion to allow 1.21.11+ from joining!");
             System.out.println("For More Information, Please see https://netgames.approximasterstudios2004.ddnsgeek.com/v26andabove.html for more info.");
@@ -68,6 +67,20 @@ public class ExampleAddon extends JavaPlugin implements SlimefunAddon {
         item.register(this);
     }
 
+   /* @Override
+    * public void onPluginLoad() {
+    * 
+    * 
+    * }
+    */
+    
+   /* @Override
+    * public void onPluginStart() {
+    * 
+    *
+    * }
+    */
+    
     @Override
     public void onDisable() {
         // Logic for disabling the plugin...

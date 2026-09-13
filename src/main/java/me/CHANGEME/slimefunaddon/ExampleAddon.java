@@ -3,8 +3,7 @@ package me.CHANGEME.slimefunaddon;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.java.JavaPlugin;
-// import org.mineacademy.fo.plugin.SimplePlugin;
+import org.mineacademy.fo.plugin.SimplePlugin;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -14,7 +13,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 
 public class main extends SimplePlugin implements SlimefunAddon {
-// public class main extends SimplePlugin implements SlimefunAddon
     @Override
     public void onPluginStart() {
         // Read something from your config.yml

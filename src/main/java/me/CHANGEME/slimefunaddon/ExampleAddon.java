@@ -13,10 +13,10 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 
-public class ExampleAddon extends JavaPlugin implements SlimefunAddon {
+public class main extends SimplePlugin implements SlimefunAddon {
 // public class main extends SimplePlugin implements SlimefunAddon
     @Override
-    public void onEnable() {
+    public void onPluginStart() {
         // Read something from your config.yml
         Config cfg = new Config(this);
 
@@ -80,7 +80,7 @@ public class ExampleAddon extends JavaPlugin implements SlimefunAddon {
     */
     
     @Override
-    public void onDisable() {
+    public void onPluginStop() {
         // Logic for disabling the plugin...
     }
 
@@ -90,13 +90,5 @@ public class ExampleAddon extends JavaPlugin implements SlimefunAddon {
         return null;
     }
 
-    @Override
-    public JavaPlugin getJavaPlugin() {
-        /*
-         * You will need to return a reference to your Plugin here.
-         * If you are using your main class for this, simply return "this".
-         */
-        return this;
-    }
 
 }

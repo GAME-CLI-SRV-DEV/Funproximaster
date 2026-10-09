@@ -28,6 +28,10 @@ dependencyResolutionManagement {
         }
 
         maven {
+            url = uri("https://repo.papermc.io/repository/maven-public/")
+        }
+
+        maven {
             name = "minecraft-libraries"
             url = uri("https://libraries.minecraft.net")
         }

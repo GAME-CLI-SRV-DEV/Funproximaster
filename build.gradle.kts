@@ -8,31 +8,7 @@ plugins {
     `maven-publish`
 }
 
-repositories {
-    mavenLocal()
 
-    maven {
-        url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
-    }
-
-    maven {
-        url = uri("https://jitpack.io")
-    }
-
-    maven {
-        url = uri("https://repo.maven.apache.org/maven2/")
-    }
-
-    maven {
-        name = "minecraft-libraries"
-        url = uri("https://libraries.minecraft.net")
-    }
-
-    maven {
-        name = "mineacademy-repo"
-        url = uri("https://bitbucket.org/kangarko/libraries/raw/master")
-    }
-}
 
 dependencies {
     implementation(libs.com.github.kangarko.foundation)

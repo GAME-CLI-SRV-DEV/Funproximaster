@@ -10,9 +10,6 @@ plugins {
 
 repositories {
     mavenLocal()
-    maven {
-        url = uri("https://repo.destroystokyo.com/repository/maven-public/")
-    }
 
     maven {
         url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")

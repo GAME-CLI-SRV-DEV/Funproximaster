@@ -18,6 +18,9 @@ dependencyResolutionManagement {
 
         maven {
             url = uri("https://jitpack.io")
+            metadataSources {
+                artifact() 
+            }
         }
 
         maven {

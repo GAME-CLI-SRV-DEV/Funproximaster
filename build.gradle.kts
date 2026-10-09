@@ -25,6 +25,16 @@ repositories {
     maven {
         url = uri("https://repo.maven.apache.org/maven2/")
     }
+
+    maven {
+        name = "minecraft-libraries"
+        url = uri("https://libraries.minecraft.net")
+    }
+
+    maven {
+        name = "mineacademy-repo"
+        url = uri("https://bitbucket.org/kangarko/libraries/raw/master")
+    }
 }
 
 dependencies {

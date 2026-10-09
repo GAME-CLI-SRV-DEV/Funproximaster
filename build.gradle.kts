@@ -35,8 +35,8 @@ repositories {
 }
 
 dependencies {
-    api(libs.com.github.kangarko.foundation)
-    implementation("com.github.GAME-CLI-SRV-DEV:Slimefun-United-SlimefunX:26.2-1181c45e04-1")
+    implementation(libs.com.github.kangarko.foundation)
+    compileOnly("com.github.GAME-CLI-SRV-DEV:Slimefun-United-SlimefunX:26.2-1181c45e04-1")
 }
 
 tasks.shadowJar {

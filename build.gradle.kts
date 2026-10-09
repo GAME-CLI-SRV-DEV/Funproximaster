@@ -4,6 +4,7 @@
 
 plugins {
     `java-library`
+    id 'com.gradleup.shadow' version '8.3.5'
     `maven-publish`
 }
 
@@ -30,6 +31,24 @@ dependencies {
     api(libs.com.github.kangarko.foundation)
     api(libs.com.github.slimefun.united.slimefun.united.slimefun.united)
 }
+
+tasks.shadowJar {
+    // 1. 이전 단계의 include 설정
+    dependencies {
+        include(dependency {
+            moduleGroup == "org.mineacademy" && moduleName.startsWith("Foundation")
+        })
+     // include(dependency("org.slf4j:slf4j-api:"))
+    }
+
+    // 2. 패키지 재배치 (Relocation) 설정
+    // Maven의 ${project.groupId}.${project.artifactId}.lib 구조를 그대로 반영합니다.
+    val targetPackage = "${project.group}.${project.name}.lib"
+    
+    relocate("org.mineacademy.fo", targetPackage)
+}
+
+
 
 group = "me.CHANGEME"
 version = "1.0.0"

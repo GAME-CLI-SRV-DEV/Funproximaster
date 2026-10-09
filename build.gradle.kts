@@ -4,7 +4,7 @@
 
 plugins {
     `java-library`
-    id("com.gradleup.shadow") version "8.3.5"
+    id("com.gradleup.shadow") version "9.6.1"
     `maven-publish`
 }
 
@@ -12,13 +12,13 @@ plugins {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:26.2.build.+")
-    implementation(libs.com.github.kangarko.foundation)
+    implementation("com.github.kangarko:Foundation:6.10.1")
     compileOnly("com.github.GAME-CLI-SRV-DEV:Slimefun-United-SlimefunX:26.2-1181c45e04-1")
 }
 
 tasks.shadowJar {
     dependencies {
-        include(dependency("org.mineacademy:Foundation.*"))
+        include(dependency("com.github.kangarko:Foundation:6.10.1"))
         
         // 추가로 포함하고 싶은 다른 의존성이 있다면 아래와 같이 복사하여 추가할 수 있습니다.
         // include(dependency("com.example:my-library.*"))
@@ -30,9 +30,9 @@ tasks.shadowJar {
 }
 
 
-group = "me.CHANGEME"
+group = "com.ddnsgeek.approximasterstudios2004.netgames.bukkitplugin"
 version = "1.0.0"
-description = "SlimefunAddon"
+description = "Funproximaster"
 
 java {
     toolchain {

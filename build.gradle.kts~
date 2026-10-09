@@ -11,14 +11,14 @@ plugins {
 
 
 dependencies {
-    
-    implementation(libs.com.github.kangarko.foundation)
+    compileOnly("io.papermc.paper:paper-api:26.2.build.+")
+    implementation("com.github.kangarko:Foundation:6.10.1")
     compileOnly("com.github.GAME-CLI-SRV-DEV:Slimefun-United-SlimefunX:26.2-1181c45e04-1")
 }
 
 tasks.shadowJar {
     dependencies {
-        include(dependency("org.mineacademy:Foundation.*"))
+        include(dependency("com.github.kangarko:Foundation:6.10.1"))
         
         // 추가로 포함하고 싶은 다른 의존성이 있다면 아래와 같이 복사하여 추가할 수 있습니다.
         // include(dependency("com.example:my-library.*"))
@@ -33,7 +33,12 @@ tasks.shadowJar {
 group = "me.CHANGEME"
 version = "1.0.0"
 description = "SlimefunAddon"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(25))
+    }
+}
 
 publishing {
     publications.create<MavenPublication>("maven") {

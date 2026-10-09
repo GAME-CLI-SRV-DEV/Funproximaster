@@ -33,21 +33,17 @@ dependencies {
 }
 
 tasks.shadowJar {
-    // 1. 이전 단계의 include 설정
     dependencies {
-        include(dependency {
-            moduleGroup == "org.mineacademy" && moduleName.startsWith("Foundation")
-        })
-     // include(dependency("org.slf4j:slf4j-api:"))
+        include(dependency("org.mineacademy:Foundation.*"))
+        
+        // 추가로 포함하고 싶은 다른 의존성이 있다면 아래와 같이 복사하여 추가할 수 있습니다.
+        // include(dependency("com.example:my-library.*"))
     }
 
     // 2. 패키지 재배치 (Relocation) 설정
-    // Maven의 ${project.groupId}.${project.artifactId}.lib 구조를 그대로 반영합니다.
     val targetPackage = "${project.group}.${project.name}.lib"
-    
     relocate("org.mineacademy.fo", targetPackage)
 }
-
 
 
 group = "me.CHANGEME"

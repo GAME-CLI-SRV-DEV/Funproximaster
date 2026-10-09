@@ -1,4 +1,4 @@
-package me.CHANGEME.slimefunaddon;
+package com.ddnsgeek.approximasterstudios2004.netgames.bukkitplugin.funproximaster.impl;
 
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;

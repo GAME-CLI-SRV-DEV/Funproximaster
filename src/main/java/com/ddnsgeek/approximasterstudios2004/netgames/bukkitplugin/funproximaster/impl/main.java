@@ -1,6 +1,7 @@
 package com.ddnsgeek.approximasterstudios2004.netgames.bukkitplugin.funproximaster.impl;
 
 import org.bukkit.Material;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.mineacademy.fo.plugin.SimplePlugin;
@@ -57,6 +58,12 @@ public class main extends SimplePlugin implements SlimefunAddon {
          */
         SlimefunItem item = new SlimefunItem(itemGroup, slimefunItem, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
         item.register(this);
+    }
+
+    @Override
+    public JavaPlugin getJavaPlugin() {
+        // Foundation의 SimplePlugin은 내부적으로 자기 자신(this)이 JavaPlugin입니다.
+        return this; 
     }
 
    /* @Override

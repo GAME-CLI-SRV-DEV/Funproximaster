@@ -4,6 +4,7 @@
 /.idea/
 /.gradle/
 /build/libs/
+/build/
 *.iml
 .project
 .classpath

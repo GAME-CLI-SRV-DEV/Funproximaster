@@ -33,7 +33,12 @@ tasks.shadowJar {
 group = "me.CHANGEME"
 version = "1.0.0"
 description = "SlimefunAddon"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(25))
+    }
+}
 
 publishing {
     publications.create<MavenPublication>("maven") {

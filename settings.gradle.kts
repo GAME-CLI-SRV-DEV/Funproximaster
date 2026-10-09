@@ -10,7 +10,28 @@ dependencyResolutionManagement {
     
     // 2. 프로젝트 전체에 적용될 글로벌 저장소 목록
     repositories {
-        mavenCentral()
-        maven { url = uri("https://jitpack.io") }
+        mavenLocal()
+
+        maven {
+            url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+        }
+
+        maven {
+            url = uri("https://jitpack.io")
+        }
+
+        maven {
+            url = uri("https://repo.maven.apache.org/maven2/")
+        }
+
+        maven {
+            name = "minecraft-libraries"
+            url = uri("https://libraries.minecraft.net")
+        }
+
+        maven {
+            name = "mineacademy-repo"
+            url = uri("https://bitbucket.org/kangarko/libraries/raw/master")
+        }
     }
 }

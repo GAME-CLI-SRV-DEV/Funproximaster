@@ -3,3 +3,14 @@
  */
 
 rootProject.name = "SlimefunAddon"
+
+dependencyResolutionManagement {
+    // 1. 저장소 선언 위치 강제 규칙
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    
+    // 2. 프로젝트 전체에 적용될 글로벌 저장소 목록
+    repositories {
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}

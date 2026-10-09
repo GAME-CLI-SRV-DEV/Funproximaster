@@ -3,6 +3,7 @@
 /target/
 /.idea/
 /.gradle/
+/build/libs/
 *.iml
 .project
 .classpath
